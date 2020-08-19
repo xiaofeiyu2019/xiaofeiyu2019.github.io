@@ -176,7 +176,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h2 id="第一次装pygame时花费了很大的力气，因此记录一下安装过程（macOS环境）"><a href="#第一次装pygame时花费了很大的力气，因此记录一下安装过程（macOS环境）" class="headerlink" title="第一次装pygame时花费了很大的力气，因此记录一下安装过程（macOS环境）"></a>第一次装pygame时花费了很大的力气，因此记录一下安装过程（macOS环境）</h2><h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p>第一步：安装pip</p>
+<p>在终端执行如下命令</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">python3</span> <span class="built_in">get</span>-pip.<span class="keyword">py</span></span><br></pre></td></tr></table></figure>
+<p>安装完毕后，执行如下命令来确认安装了pip</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>第二步：安装Homebrew</p>
+<p>因为墙的原因，我们不依靠Homebrew官网上的命令来下载，而是用国内的地址来下载。在终端执行如下命令</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/bin/</span>zsh -c <span class="string">&quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;</span></span><br></pre></td></tr></table></figure>
+<p>按照它的指引便可完成Homebrew的安装</p>
+<p>第三步：安装pygame依赖的库以及pygame</p>
+<p>先安装pygame依赖的库，在终端执行如下命令</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>hg sdl sdl_image sdl_ttf</span><br></pre></td></tr></table></figure>
+<p>接下来安装pygame，在终端执行如下命令</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install --user hg+http:<span class="regexp">//</span>bitbucket.org<span class="regexp">/pygame/</span>pygame</span><br></pre></td></tr></table></figure>
+<p>这样，就完成了pygame的安装（注意！！！ 使用pycharm等编译器时，还需要安装pygame模块）</p>
 
       
 
